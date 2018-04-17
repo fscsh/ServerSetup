@@ -1,5 +1,6 @@
-module.exports = function(app){
-    app.get('/',function(req,res,next){
-        res.send(['Michael','Shuhao','Chen'])
-    })
+const Authen = require('./controllers/authen');
+
+
+module.exports = function(app) {
+    app.post('/signup', Authen.signup)
 }
